@@ -2,20 +2,19 @@
 Handle authorization at server
 
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+An open source library to handle server based authorization.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Build
+1. Open solution src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln.
+2. Build
 
-# Build
-TODO: Describe and show how to build your code and run the tests. 
-
-# Test
+## Test
+1. Open src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln.
+2. Build
+3. Open project src/MS.ServerRoleAuthorization.FunctionalTests.
+4. Run Test (s) ServerRoleTests.
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Always welcome. Feel free to raise a request from GitHub.
 

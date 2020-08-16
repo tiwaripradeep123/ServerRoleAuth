@@ -1,0 +1,47 @@
+[
+
+  {
+    "Roles": [ "Role1" ],
+    "SupportedActions": [
+      {
+        "Request": "A",
+        "RequestSubType": "B"
+      },
+      {
+        "Request": "A",
+        "RequestSubType": "C"
+      },
+      {
+        "Request": "C",
+        "RequestSubType": "*"
+      }
+    ]
+  },
+  {
+    "Roles": [ "Role2", "Role3" ],
+    "SupportedActions": [
+      {
+        "Request": "C",
+        "RequestSubType": "*"
+      }
+    ]
+  },
+  {
+    "Roles": [ "*" ],
+    "SupportedActions": [
+      {
+        "Request": "D",
+        "RequestSubType": "*"
+      }
+    ]
+  },
+  {
+    "Roles": [ "Role4" ],
+    "SupportedActions": [
+      {
+        "Request": "*",
+        "RequestSubType": "*"
+      }
+    ]
+  }
+]

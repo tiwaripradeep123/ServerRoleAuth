@@ -24,13 +24,13 @@ ruleEngine.IsAllowed("Role1", "A")
 
 * Define Role1 should have access to all requests. 
 
-  ```cs
+  ```json
 {
-    "Roles": [ "Role4" ], // Multiple roles cab be assigned.
+    "Roles": [ "Role4" ], /* Multiple roles cab be assigned. */
     "SupportedActions": [
       {
         "Request": "*",
-        "RequestSubType": "*" // an optional param in case we want to control with additional parameter
+        "RequestSubType": "*" /* an optional param in case we want to control with additional parameter */
       }
     ]
  }
@@ -39,7 +39,7 @@ ruleEngine.IsAllowed("Role1", "A")
 
   ```json
 {
-    "Roles": [ "Role2", "Role3" ], // Multiple roles cab be assigned.
+    "Roles": [ "Role2", "Role3" ],
     "SupportedActions": [
       {
         "Request": "EmployeeRead"
@@ -52,7 +52,7 @@ ruleEngine.IsAllowed("Role1", "A")
   ```json
   
 {
-    "Roles": [ "Role4" ], // Multiple roles cab be assigned.
+    "Roles": [ "Role4" ],
     "SupportedActions": [
       {
         "Request": "EmployeeRead"
@@ -68,7 +68,7 @@ ruleEngine.IsAllowed("Role1", "A")
   ```json
 
 {
-    "Roles": [ "*" ], // Multiple roles cab be assigned.
+    "Roles": [ "*" ], 
     "SupportedActions": [
       {
         "Request": "ProductRead"

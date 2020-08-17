@@ -23,14 +23,15 @@ Use Like
 # How to configure in json
 
 * Define Role1 should have access to all requests. 
+  RequestSubType is an optional param in case we want to control with additional parameter.
 
   ```json
 	{
-	    "Roles": [ "Role4" ], /* Multiple roles cab be assigned. */
+	    "Roles": [ "Role4" ],
 	    "SupportedActions": [
 	      {
 		"Request": "*",
-		"RequestSubType": "*" /* an optional param in case we want to control with additional parameter */
+		"RequestSubType": "*"
 	      }
 	    ]
 	 }

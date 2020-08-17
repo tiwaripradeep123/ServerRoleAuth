@@ -1,5 +1,5 @@
 # ServerRoleAuth
-Handle authorization at server
+Configure request based authorization at server side with simple configuration
 
 # Introduction 
 An open source library to handle server based authorization.

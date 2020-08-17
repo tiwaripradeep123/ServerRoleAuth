@@ -19,7 +19,7 @@ Configure roles with actions in json and use it.
 4. Run Test (s) ServerRoleTests.
 
 ## How to use
-* [How To configure Role based configurations](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Examples.md)
+* [How To configure Role based configurations](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ConfigureJson.md)
 * [How start changes at Server Side](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ServerSideChanges.md)
 
 # Contribute

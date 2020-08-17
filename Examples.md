@@ -16,63 +16,64 @@ Register following dependency
 Use Like 
 
   ```cs
-ruleEngine.IsAllowed("Role1", "A", "B")
-ruleEngine.IsAllowed("Role1", "A")
+	ruleEngine.IsAllowed("Role1", "A", "B")
+	ruleEngine.IsAllowed("Role1", "A")
   ```
 
 # How to configure in json
 
 * Define Role1 should have access to all requests. 
+  RequestSubType is an optional param in case we want to control with additional parameter.
 
   ```json
-{
-    "Roles": [ "Role4" ], /* Multiple roles cab be assigned. */
-    "SupportedActions": [
-      {
-        "Request": "*",
-        "RequestSubType": "*" /* an optional param in case we want to control with additional parameter */
-      }
-    ]
- }
+	{
+	    "Roles": [ "Role4" ],
+	    "SupportedActions": [
+	      {
+		"Request": "*",
+		"RequestSubType": "*"
+	      }
+	    ]
+	 }
    ```
  * Define Role2, Role3 should have access to Employee Read requests. 
 
   ```json
-{
-    "Roles": [ "Role2", "Role3" ],
-    "SupportedActions": [
-      {
-        "Request": "EmployeeRead"
-      }
-    ]
- }
+	{
+	    "Roles": [ "Role2", "Role3" ],
+	    "SupportedActions": [
+	      {
+		"Request": "EmployeeRead"
+	      }
+	    ]
+	 }
    ```
  * Define Role4 should have access to Employee Read and write requests. 
 
   ```json
   
-{
-    "Roles": [ "Role4" ],
-    "SupportedActions": [
-      {
-        "Request": "EmployeeRead"
-      },
-      {
-        "Request": "EmployeeWrite"
-      }
-    ]
- }
+	{
+	    "Roles": [ "Role4" ],
+	    "SupportedActions": [
+	      {
+		"Request": "EmployeeRead"
+	      },
+	      {
+		"Request": "EmployeeWrite"
+	      }
+	    ]
+	 }
    ```
  * Define all roles should have access to Product Read requests. 
  
   ```json
 
-{
-    "Roles": [ "*" ], 
-    "SupportedActions": [
-      {
-        "Request": "ProductRead"
-      }
-    ]
- }
+	{
+	    "Roles": [ "*" ], 
+	    "SupportedActions": [
+	      {
+		"Request": "ProductRead"
+	      }
+	    ]
+	 }
    ```

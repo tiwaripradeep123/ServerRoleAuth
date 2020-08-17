@@ -1,4 +1,6 @@
 # ServerRoleAuth
+[![NuGet package](https://img.shields.io/nuget/v/ServerRoleAuth.svg)](https://www.nuget.org/packages/ServerRoleAuth/)
+
 Configure request based authorization at server side with simple configuration
 
 # Introduction 

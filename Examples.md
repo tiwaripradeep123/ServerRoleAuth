@@ -7,13 +7,15 @@ Refer: RoleBasedConfigurations.json from src/MS.ServerRoleAuthorization.Function
 ## Step 2
 Register following dependency
 
-  ```
+  ```cs
 	Container.RegisterType<IRuleEngine, RuleEngine>();
+
   ```
 
 ## Step 3
 Use Like 
-  ```
+
+  ```cs
 ruleEngine.IsAllowed("Role1", "A", "B")
 ruleEngine.IsAllowed("Role1", "A")
   ```
@@ -21,7 +23,8 @@ ruleEngine.IsAllowed("Role1", "A")
 # How to configure in json
 
 * Define Role1 should have access to all requests. 
-  ```
+
+  ```cs
 {
     "Roles": [ "Role4" ], // Multiple roles cab be assigned.
     "SupportedActions": [
@@ -33,7 +36,8 @@ ruleEngine.IsAllowed("Role1", "A")
  }
    ```
  * Define Role2, Role3 should have access to Employee Read requests. 
-  ```
+
+  ```json
 {
     "Roles": [ "Role2", "Role3" ], // Multiple roles cab be assigned.
     "SupportedActions": [
@@ -44,7 +48,9 @@ ruleEngine.IsAllowed("Role1", "A")
  }
    ```
  * Define Role4 should have access to Employee Read and write requests. 
-  ```
+
+  ```json
+  
 {
     "Roles": [ "Role4" ], // Multiple roles cab be assigned.
     "SupportedActions": [
@@ -58,7 +64,9 @@ ruleEngine.IsAllowed("Role1", "A")
  }
    ```
  * Define all roles should have access to Product Read requests. 
-  ```
+ 
+  ```json
+
 {
     "Roles": [ "*" ], // Multiple roles cab be assigned.
     "SupportedActions": [

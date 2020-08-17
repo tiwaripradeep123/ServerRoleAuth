@@ -8,38 +8,45 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    branches: 
+      - '*'
+env:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
     
-cache:
-  paths:
-  - ~/.local/share/NuGet/Cache
-  - ~/.nuget/packages
-   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
-`
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
     - name: Setup Nuget.exe
-      uses: 
-        warrenbuckley/Setup-Nuget@v1        
-
-      
-    - name: Run Nuget setup
-      run: nuget restore MS.ServerRoleAuthorization.sln
-      
+      uses: actions/checkout@master
+                     
+    - name: Run Nuget restore
+      run: nuget restore .\src\MS.ServerRoleAuthorization\MS.ServerRoleAuthorization.sln   
+    
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
 
     - name: MSBuild
-      working-directory: src
-      run: msbuild MS.ServerRoleAuthorization.sln
+      run: msbuild src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln
+      env:
+        solution: src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln
+        platform: "Any CPU"
+        configuration: "Release"
+                
+       
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: published_webapp
+        path: src\MS.ServerRoleAuthorization\MS.ServerRoleAuthorization\bin\Release
 

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ServerRoleAuth</id>
+    <version>1.0.0</version>
+    <title>Server Role Auth</title>
+    <authors>Ankit Varma</authors>
+    <owners>Ankit Varma</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/ankitvarmait/ServerRoleAuth/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ankitvarmait/ServerRoleAuth</projectUrl>
+    <iconUrl>https://github.com/ankitvarmait/ServerRoleAuth/blob/master/src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization/Icon.ico</iconUrl>
+    <description>Configure request based authorization at server side with simple configuration</description>
+    <summary>Configure request based authorization at server side with simple configuration</summary>
+    <copyright>Copyright (c) 2020 Ankit Varma</copyright>
+    <language>en-IN</language>
+    <tags>ServerRole, Configuration, Auth</tags>
+  </metadata>
+  <files>
+    <file src="lib\net472\MS.ServerRoleAuthorization.dll" target="lib\net472\MS.ServerRoleAuthorization.dll" />
+  </files>
+</package>

@@ -20,10 +20,10 @@
 * Request : RequestName or api name or public method name defined at server
 * RequestSubType: Optional: An additional parameter to consider auth handling.
 * Use * to define condition for all.
-* Group: Group all roles configuration, for examples Group1 has different configurations than group 2.
-  use * if you dont want to consider. 
+* Group: group all configurations, for examples Group1 has different configurations than Group2.
+  You can use * if you dont want to consider. 
   Use case: 
-    1. Server supports two types of customers: customer 1 and custoer 2.
+    1. Server supports two types of customers: customer 1 and customer 2.
     2. For customer 1, roles are different than customer 2, also access can be different.
     3. use group for this case
 

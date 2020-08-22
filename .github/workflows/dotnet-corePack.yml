@@ -1,0 +1,53 @@
+name: .NET Core
+
+on:
+  schedule: 
+    - cron:  '* */1 * * *'
+
+env:
+  
+  # Project name to pack and publish
+  PROJECT_NAME: ServerRoleAuth
+
+
+  # Official NuGet Feed settings
+  NUGET_FEED: https://api.nuget.org/v3/index.json
+  NUGET_KEY: ${{ secrets.NUGET_KEY }}
+  
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+     
+    - name: print Varaible
+      run: echo "$Env:GITHUB_RUN_ID" "$Env:VERSION" $Env:GITHUB_RUN_ID
+     
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.301
+      
+    - name: Install dependencies
+      run: dotnet restore src/MS.ServerRoleAuthorization.sln  
+    
+    - name: Build
+      run: dotnet build src/MS.ServerRoleAuthorization.sln  --configuration Release --no-restore
+    
+    - name: Test
+      run: dotnet test src/MS.ServerRoleAuthorization.sln --no-restore --verbosity normal
+
+    
+    - name: Pack
+      run: dotnet pack -v normal -c Release --no-restore --include-symbols --include-source --version-suffix release-$Env:GITHUB_RUN_ID src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.csproj
+      
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: nupkg
+        path: ./src/MS.ServerRoleAuthorization/bin/Release/*.nupkg
+        
+    - name: Push to NuGet Feed
+      run: dotnet nuget push "**/*.nupkg" --source $Env:NUGET_FEED --skip-duplicate --api-key $Env:NUGET_KEY

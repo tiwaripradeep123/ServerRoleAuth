@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MS.ServerRoleAuthorization
 {
-    public interface IRuleHandler
+    internal interface IRuleHandler
     {
         bool ExecuteRule(IEnumerable<RoleConfigurations> roleConfigurations, (string Action, string SubAction) action);
     }

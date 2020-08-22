@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MS.ServerRoleAuthorization
 {
-    public class SupportedActionsHelper
+    internal class SupportedActionsHelper
     {
         public static bool IsActionConfigured(string action, string subAction, SupportedActions[] SupportedActions, ConfigurationOptions configurationOptions)
         {

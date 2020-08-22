@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace MS.ServerRoleAuthorization
 {
-    public class RoleValidator : IValidator
+    internal class RoleValidator : IValidator
     {
         public bool Validate(IEnumerable<RoleConfigurations> roleConfigurations, (string Action, string SubAction) action, ConfigurationOptions configurationOptions)
         {

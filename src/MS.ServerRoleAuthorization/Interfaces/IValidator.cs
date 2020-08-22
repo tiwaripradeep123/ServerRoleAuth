@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MS.ServerRoleAuthorization
 {
-    public interface IValidator
+    internal interface IValidator
     {
         bool Validate(IEnumerable<RoleConfigurations> roleConfigurations, (string Action, string SubAction) action, ConfigurationOptions configurationOptions);
     }

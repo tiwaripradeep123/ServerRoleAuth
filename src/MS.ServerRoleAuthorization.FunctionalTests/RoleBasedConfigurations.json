@@ -1,46 +1,63 @@
 [
-
   {
-    "Roles": [ "Role1" ],
-    "SupportedActions": [
+    "Group": "System1",
+    "RoleConfigurations": [
       {
-        "Request": "A",
-        "RequestSubType": "B"
+        "Roles": [ "Role1" ],
+        "SupportedActions": [
+          {
+            "Request": "A",
+            "RequestSubType": "B"
+          },
+          {
+            "Request": "A",
+            "RequestSubType": "C"
+          },
+          {
+            "Request": "C",
+            "RequestSubType": "*"
+          }
+        ]
       },
       {
-        "Request": "A",
-        "RequestSubType": "C"
+        "Roles": [ "Role2", "Role3" ],
+        "SupportedActions": [
+          {
+            "Request": "C",
+            "RequestSubType": "*"
+          }
+        ]
       },
       {
-        "Request": "C",
-        "RequestSubType": "*"
+        "Roles": [ "*" ],
+        "SupportedActions": [
+          {
+            "Request": "D",
+            "RequestSubType": "*"
+          }
+        ]
+      },
+      {
+        "Roles": [ "Role4" ],
+        "SupportedActions": [
+          {
+            "Request": "*",
+            "RequestSubType": "*"
+          }
+        ]
       }
     ]
   },
   {
-    "Roles": [ "Role2", "Role3" ],
-    "SupportedActions": [
+    "Group": "System2",
+    "RoleConfigurations": [
       {
-        "Request": "C",
-        "RequestSubType": "*"
-      }
-    ]
-  },
-  {
-    "Roles": [ "*" ],
-    "SupportedActions": [
-      {
-        "Request": "D",
-        "RequestSubType": "*"
-      }
-    ]
-  },
-  {
-    "Roles": [ "Role4" ],
-    "SupportedActions": [
-      {
-        "Request": "*",
-        "RequestSubType": "*"
+        "Roles": [ "*" ],
+        "SupportedActions": [
+          {
+            "Request": "*"
+          }
+        ]
       }
     ]
   }

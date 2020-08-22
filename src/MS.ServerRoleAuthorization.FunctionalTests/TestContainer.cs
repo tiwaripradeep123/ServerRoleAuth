@@ -1,7 +1,5 @@
 ﻿using MS.ServerRoleAuthorization.Contracts;
-using System;
 using Unity;
-using Unity.Injection;
 
 namespace MS.ServerRoleAuthorization.FunctionalTests
 {
@@ -15,16 +13,9 @@ namespace MS.ServerRoleAuthorization.FunctionalTests
 
         private void RegisterServerRoleComponents(string configData)
         {
-
-            //Action<Container> action;
-
-
-            var options = new ConfigurationOptions(configData)
+            var options = new ConfigurationOptions(Container, configData)
                 .WithIgnoreCaseMode(true);
-            Container.RegisterType<ISetupConfigurations, DefaultSetupConfigurations>(new InjectionConstructor(options));
-            Container.RegisterType<IRuleHandler, RuleHandler>();
-            Container.RegisterType<IRuleEngine, RuleEngine>();
-            Container.RegisterType<IValidator, RoleValidator>();
+            RegisterRules.SetupConfiguration(options);
         }
 
         public UnityContainer Container { get; }

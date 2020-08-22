@@ -1,6 +1,6 @@
 ﻿namespace MS.ServerRoleAuthorization.Contracts
 {
-    public static class Constants
+    internal static class Constants
     {
         public const string Asterisk = "*";
     }

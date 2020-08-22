@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MS.ServerRoleAuthorization
 {
-    public class RuleHandler : IRuleHandler
+    internal class RuleHandler : IRuleHandler
     {
         private readonly ISetupConfigurations setupConfigurations;
         private readonly IValidator validator;

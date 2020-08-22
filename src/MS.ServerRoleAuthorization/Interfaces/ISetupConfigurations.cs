@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MS.ServerRoleAuthorization
 {
-    public interface ISetupConfigurations
+    internal interface ISetupConfigurations
     {
-        IEnumerable<RoleConfigurations> RoleConfigurationsByRole(string role);
+        IEnumerable<RoleConfigurations> RoleConfigurationsByRole(string role, string group);
 
         ConfigurationOptions ConfigurationOptions();
     }

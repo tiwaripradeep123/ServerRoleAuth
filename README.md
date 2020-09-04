@@ -15,6 +15,22 @@ Configure request based authorization at server side with simple JSON based conf
      * Incomeing Request Name.
      * Incoming Request -Sub Name (any additional condition if any). 
      * Customer type/ Group type (if any).
+ 
+ * Schema
+ ``` josn
+     [
+        "Group": "",
+        "RoleConfigurations": [
+	        {
+	           "Roles": [ "" ],
+	           "SupportedActions": [
+	            {
+		               "Request": "",
+		               "RequestSubType": ""
+	            }]
+	        }]
+     ]
+```
      
 # Getting Started
 ## Build

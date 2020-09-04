@@ -17,35 +17,36 @@ Configure request based authorization at server side with simple JSON based conf
      * Customer type/ Group type (if any).
  
  * Schema
- ``` josn
-     [
-        "Group": "",
-        "RoleConfigurations": [
-	        {
-	           "Roles": [ "" ],
-	           "SupportedActions": [
-	            {
-		               "Request": "",
-		               "RequestSubType": ""
-	            }]
-	        }]
-     ]
-```
-     
+	  ``` josn
+	  [
+	   "Group": "",
+	   "RoleConfigurations": [
+		{
+		   "Roles": [""],
+		   "SupportedActions": [
+			{
+			  "Request": "",
+			   "RequestSubType": ""
+			}]
+		}]
+	  ]
+	 ```
+	 
 # Getting Started
-## Build
+## How to use it:
+* [How to configure Role based configurations](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ConfigureJson.md)
+* [How start changes at Server Side](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ServerSideChanges.md) 
+
+## How to customize it:
+### Build
 * Project Path `src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln.`
 * Build. `dotnet build`
 
-## Test
+### Test
 * Project path `src/MS.ServerRoleAuthorization/MS.ServerRoleAuthorization.sln.`
 * Build. `dotnet build`
 * Test project path`src/MS.ServerRoleAuthorization.FunctionalTests`
 * Run test(s) ServerRoleTests. `dotnet test`
-
-## How to use
-* [How to configure Role based configurations](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ConfigureJson.md)
-* [How start changes at Server Side](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ServerSideChanges.md)
 
 # Contribute
 Always welcome. Feel free to raise a request from GitHub.

@@ -1,14 +1,14 @@
-﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MS.ServerRoleAuthorization.FunctionalTests;
 
-namespace MS.ServerRoleAuthorization.FunctionalTests
+namespace MS.ServerRoleAuthorization.PackagelTests
 {
     [TestClass]
-    public class ServerRoleTests : TestBase
+    public class PackageTests : TestBase
     {
-        public ServerRoleTests()
+        public PackageTests()
         {
-            base.Initialize(LoadConfig("MS.ServerRoleAuthorization.FunctionalTests.RoleBasedConfigurations.json"));
+            base.Initialize(LoadConfig("MS.ServerRoleAuthorization.PackageTests.RoleBasedConfigurations.json"));
         }
 
         /*
@@ -83,5 +83,6 @@ namespace MS.ServerRoleAuthorization.FunctionalTests
             Assert.IsTrue(ruleEngine.IsAllowed("role2", "F", "s", "System2"));
 
         }
+
     }
 }

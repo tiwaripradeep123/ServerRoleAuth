@@ -19,7 +19,7 @@
     <Description>Configure request based authorization at server side with simple configuration</Description>
     <licenseUrl>https://github.com/ankitvarmait/ServerRoleAuth/blob/master/LICENSE</licenseUrl>
     <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.1</VersionPrefix>
     <VersionSuffix>alpha</VersionSuffix>
   </PropertyGroup>
 

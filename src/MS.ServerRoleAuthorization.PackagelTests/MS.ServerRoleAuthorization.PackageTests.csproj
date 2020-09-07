@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net472</TargetFrameworks>
@@ -29,7 +29,7 @@
     <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
     <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
-    <PackageReference Include="ServerRoleAuth" Version="3.0.1-alpha" />
+    <PackageReference Include="ServerRoleAuth" Version="3.0.1" />
     <PackageReference Include="Unity" Version="5.11.7" />
   </ItemGroup>
 

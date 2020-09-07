@@ -3,11 +3,6 @@
 ## Install package: 
 [![NuGet package](https://img.shields.io/nuget/v/ServerRoleAuth.svg)](https://www.nuget.org/packages/ServerRoleAuth/)
 
-## Register dependencies
-  ```cs
-	Container.RegisterType<IRuleEngine, RuleEngine>();
-
-  ```
 ## Define configuration
 [Register Role based configurations](https://github.com/ankitvarmait/ServerRoleAuth/blob/master/Docs/ConfigureJson.md)
 
@@ -16,7 +11,7 @@
  ```cs
  var options = new ConfigurationOptions(configData)
                 .WithIgnoreCaseMode(true);
- Container.RegisterType<ISetupConfigurations, DefaultSetupConfigurations>(new InjectionConstructor(options));
+ RegisterRules.SetupConfiguration(options);ns>(new InjectionConstructor(options));
  ```
  * WithIgnoreCaseMode: Provides capability to configure case incentive evaluation.
  ```cs
@@ -29,4 +24,10 @@
 	var isRequestValid = ruleEngine.IsAllowed("Role1", "A", "B")
   // OR
 	var isRequestValid = ruleEngine.IsAllowed("Role1", "A")
+  ```
+
+  ```cs
+	var isRequestValid = ruleEngine.IsAllowed("Role1", "A", "B", "Group1")
+  // OR
+	var isRequestValid = ruleEngine.IsAllowed("Role1", "A", "Group2")
   ```

@@ -12,7 +12,13 @@
 		"Request": "",
 		"RequestSubType": ""
 	      }
-	    ]
+	    ],
+	    "NotSupportedActions:" [
+	      {
+		"Request": "",
+		"RequestSubType": ""
+	      }
+	    ],
 	 }
  ]
 ]
@@ -151,5 +157,48 @@ E.g.
    ]
    
    ```
-   
-   
+    * Define all roles should have access to all requests except Write Access to Employee. 
+
+  ```json
+	{
+	    "Roles": [ "*" ],
+	    "SupportedActions": [
+	      {
+		"Request": "*",
+		"RequestSubType": "*"
+	      }
+	    ],
+	    "NotSupportedActions": [
+	      {
+		"Request": "Employee",
+		"RequestSubType": "Write"
+	      }
+	    ]
+	 }
+   ```
+     * Define all roles should have access to all requests except Write Access to Employee. And Admin role can access to all requests including  Write Access to Employee
+
+  ```json
+	{
+	    "Roles": [ "*" ],
+	    "SupportedActions": [
+	      {
+		"Request": "*",
+		"RequestSubType": "*"
+	      }
+	    ],
+	    "NotSupportedActions": [
+	      {
+		"Request": "Employee",
+		"RequestSubType": "Write"
+	      }
+	    ],
+	    {
+	   "Roles": ["Admin"],
+	   "SupportedActions": [
+	     "Request" : "*",
+	     "RequestSubType": "Write"
+	   ]
+	}
+	 }
+   ```

@@ -12,7 +12,7 @@ Configure request based authorization at server side with simple JSON based conf
   * Simple JSON based configuration. 
   * Check incoming request by 
      * User Role.
-     * Incomeing Request Name.
+     * Incoming Request Name.
      * Incoming Request -Sub Name (any additional condition if any). 
      * Customer type/ Group type (if any).
  
